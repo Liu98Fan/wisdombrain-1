@@ -1,0 +1,887 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="698c2715-52da-4d64-9f4d-9fa22e20488e" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="663420985">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="1-SNAPSHOT" value="1" />
+          <entry key="class" value="1" />
+          <entry key="css" value="3" />
+          <entry key="html" value="5" />
+          <entry key="java" value="37" />
+          <entry key="js" value="6" />
+          <entry key="properties" value="5" />
+          <entry key="xml" value="11" />
+          <entry key="yml" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="1" />
+          <entry key="CSS" value="3" />
+          <entry key="HTML" value="5" />
+          <entry key="JAVA" value="37" />
+          <entry key="JavaScript" value="6" />
+          <entry key="Properties" value="5" />
+          <entry key="UML" value="1" />
+          <entry key="XML" value="11" />
+          <entry key="YAML" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="html" value="17" />
+          <entry key="java" value="453" />
+          <entry key="properties" value="118" />
+          <entry key="xml" value="137" />
+          <entry key="yml" value="918" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="17" />
+          <entry key="JAVA" value="453" />
+          <entry key="Properties" value="118" />
+          <entry key="XML" value="137" />
+          <entry key="YAML" value="918" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wisdombrain/system/service/userService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wisdombrain/system/serviceImpl/userServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="219">
+              <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wisdombrain/system/mapper/userMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="309">
+              <caret line="27" column="58" lean-forward="true" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wisdombrain/system/service/baseService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wisdombrain/system/serviceImpl/baseServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="30" column="13" lean-forward="true" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wisdombrain/system/realm/shiroRealm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="64" selection-start-line="64" selection-end-line="64" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wisdombrain/system/config/druidConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-120">
+              <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wisdombrain/system/config/redisConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wisdombrain/system/controller/loginController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="86" column="5" lean-forward="true" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3489#3490#0" expanded="true" />
+                <element signature="e#3527#3528#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/wisdombrain/system/config/druidConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wisdombrain/system/config/mybatisConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wisdombrain/system/SystemApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/gateway/login.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wisdombrain/system/entities/BaseEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wisdombrain/system/mapper/userMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wisdombrain/system/realm/shiroRealm.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wisdombrain/system/config/shiroConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/authorization.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/gateway/main.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/user.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wisdombrain/system/service/baseService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wisdombrain/system/entities/Vuser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wisdombrain/system/entities/Permission.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wisdombrain/system/service/userService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mybatis-config.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/gateway/error.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wisdombrain/system/config/myExceptionHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wisdombrain/system/config/redisConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wisdombrain/system/serviceImpl/userServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wisdombrain/system/serviceImpl/baseServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wisdombrain/system/controller/loginController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../../maven/apache-maven-3.5.4" />
+        <option name="userSettingsFile" value="$PROJECT_DIR$/../../maven/apache-maven-3.5.4/conf/settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1897" />
+    <option name="y" value="204" />
+    <option name="width" value="1398" />
+    <option name="height" value="947" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <hideEmptyPackages ProjectPane="true" />
+      <abbreviatePackageNames ProjectPane="true" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="realm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="serviceImpl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541406397357" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/mybatis/mapper" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/asserts/js" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/asserts/css" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/asserts" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/wisdombrain/system/realm" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="SystemApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="system" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wisdombrain.system.SystemApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="698c2715-52da-4d64-9f4d-9fa22e20488e" name="Default Changelist" comment="" />
+      <created>1541396262437</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1541396262437</updated>
+      <workItem from="1541396266955" duration="4277000" />
+      <workItem from="1541400570084" duration="100000" />
+      <workItem from="1541400674822" duration="841000" />
+      <workItem from="1541401543104" duration="1408000" />
+      <workItem from="1541402972371" duration="3428000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="10054000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1919" y="-11" width="1602" height="849" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19127086" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32962447" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991655" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32962447" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="13" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wisdombrain/system/config/mybatisConfig.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/asserts/bootstrap/js/bootstrap.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/asserts/css/font-awesome.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/asserts/css/form-elements.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/asserts/css/login.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/asserts/js/html5shiv.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/asserts/js/jquery-3.3.1.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/asserts/js/jquery.backstretch.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/asserts/js/scripts.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/asserts/js/respond.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/authorization.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/gateway/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/gateway/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="885">
+          <caret line="59" column="31" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wisdombrain/system/entities/BaseEntity.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wisdombrain/system/entities/Vuser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wisdombrain/system/entities/Permission.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/user.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="39" column="45" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.12/tomcat-embed-core-9.0.12.jar!/org/apache/coyote/AbstractProtocol.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="637" selection-start-line="637" selection-end-line="637" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://MAVEN/com.wisdombrain:system:0.0.1-SNAPSHOT">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>MAVEN</ID>
+          <OriginalElement>com.wisdombrain:system:0.0.1-SNAPSHOT</OriginalElement>
+          <nodes>
+            <node x="" y="">com.wisdombrain:system:0.0.1-SNAPSHOT</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jdbc:jar:2.1.0.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jdbc:jar:2.1.0.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.1.0.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jdbc:jar:2.1.0.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.1.0.RELEASE/org.springframework.boot:spring-boot:jar:2.1.0.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jdbc:jar:2.1.0.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.1.0.RELEASE/org.springframework.boot:spring-boot-autoconfigure:jar:2.1.0.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jdbc:jar:2.1.0.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.1.0.RELEASE/org.springframework.boot:spring-boot-starter-logging:jar:2.1.0.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jdbc:jar:2.1.0.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.1.0.RELEASE/org.springframework.boot:spring-boot-starter-logging:jar:2.1.0.RELEASE/ch.qos.logback:logback-classic:jar:1.2.3</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jdbc:jar:2.1.0.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.1.0.RELEASE/org.springframework.boot:spring-boot-starter-logging:jar:2.1.0.RELEASE/ch.qos.logback:logback-classic:jar:1.2.3/ch.qos.logback:logback-core:jar:1.2.3</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jdbc:jar:2.1.0.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.1.0.RELEASE/org.springframework.boot:spring-boot-starter-logging:jar:2.1.0.RELEASE/org.apache.logging.log4j:log4j-to-slf4j:jar:2.11.1</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jdbc:jar:2.1.0.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.1.0.RELEASE/org.springframework.boot:spring-boot-starter-logging:jar:2.1.0.RELEASE/org.apache.logging.log4j:log4j-to-slf4j:jar:2.11.1/org.apache.logging.log4j:log4j-api:jar:2.11.1</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jdbc:jar:2.1.0.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.1.0.RELEASE/org.springframework.boot:spring-boot-starter-logging:jar:2.1.0.RELEASE/org.slf4j:jul-to-slf4j:jar:1.7.25</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jdbc:jar:2.1.0.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.1.0.RELEASE/javax.annotation:javax.annotation-api:jar:1.3.2</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jdbc:jar:2.1.0.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.1.0.RELEASE/org.yaml:snakeyaml:jar:1.23</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jdbc:jar:2.1.0.RELEASE/com.zaxxer:HikariCP:jar:3.2.0</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jdbc:jar:2.1.0.RELEASE/org.springframework:spring-jdbc:jar:5.1.2.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jdbc:jar:2.1.0.RELEASE/org.springframework:spring-jdbc:jar:5.1.2.RELEASE/org.springframework:spring-beans:jar:5.1.2.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jdbc:jar:2.1.0.RELEASE/org.springframework:spring-jdbc:jar:5.1.2.RELEASE/org.springframework:spring-tx:jar:5.1.2.RELEASE</node>
+            <node x="" y="">com.google.guava:guava:jar:14.0.1</node>
+            <node x="" y="">net.sf.json-lib:json-lib:jar:jdk15:2.4</node>
+            <node x="" y="">net.sf.json-lib:json-lib:jar:jdk15:2.4/commons-beanutils:commons-beanutils:jar:1.8.0</node>
+            <node x="" y="">net.sf.json-lib:json-lib:jar:jdk15:2.4/commons-collections:commons-collections:jar:3.2.1</node>
+            <node x="" y="">net.sf.json-lib:json-lib:jar:jdk15:2.4/commons-lang:commons-lang:jar:2.5</node>
+            <node x="" y="">net.sf.json-lib:json-lib:jar:jdk15:2.4/commons-logging:commons-logging:jar:1.1.1</node>
+            <node x="" y="">net.sf.json-lib:json-lib:jar:jdk15:2.4/net.sf.ezmorph:ezmorph:jar:1.0.6</node>
+            <node x="" y="">net.sf.json-lib:json-lib:jar:jdk15:2.4/net.sf.ezmorph:ezmorph:jar:1.0.6/commons-lang:commons-lang:jar:2.3</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-mail:jar:2.1.0.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-mail:jar:2.1.0.RELEASE/org.springframework:spring-context:jar:5.1.2.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-mail:jar:2.1.0.RELEASE/org.springframework:spring-context:jar:5.1.2.RELEASE/org.springframework:spring-aop:jar:5.1.2.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-mail:jar:2.1.0.RELEASE/org.springframework:spring-context:jar:5.1.2.RELEASE/org.springframework:spring-expression:jar:5.1.2.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-mail:jar:2.1.0.RELEASE/org.springframework:spring-context-support:jar:5.1.2.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-mail:jar:2.1.0.RELEASE/com.sun.mail:javax.mail:jar:1.6.2</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-mail:jar:2.1.0.RELEASE/com.sun.mail:javax.mail:jar:1.6.2/javax.activation:activation:jar:1.1</node>
+            <node x="" y="">org.apache.shiro:shiro-spring:jar:1.3.2</node>
+            <node x="" y="">org.apache.shiro:shiro-spring:jar:1.3.2/org.apache.shiro:shiro-web:jar:1.3.2</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.0.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.0.RELEASE/org.springframework.boot:spring-boot-starter-json:jar:2.1.0.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.0.RELEASE/org.springframework.boot:spring-boot-starter-json:jar:2.1.0.RELEASE/com.fasterxml.jackson.core:jackson-databind:jar:2.9.7</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.0.RELEASE/org.springframework.boot:spring-boot-starter-json:jar:2.1.0.RELEASE/com.fasterxml.jackson.core:jackson-databind:jar:2.9.7/com.fasterxml.jackson.core:jackson-annotations:jar:2.9.0</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.0.RELEASE/org.springframework.boot:spring-boot-starter-json:jar:2.1.0.RELEASE/com.fasterxml.jackson.core:jackson-databind:jar:2.9.7/com.fasterxml.jackson.core:jackson-core:jar:2.9.7</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.0.RELEASE/org.springframework.boot:spring-boot-starter-json:jar:2.1.0.RELEASE/com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.9.7</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.0.RELEASE/org.springframework.boot:spring-boot-starter-json:jar:2.1.0.RELEASE/com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.9.7</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.0.RELEASE/org.springframework.boot:spring-boot-starter-json:jar:2.1.0.RELEASE/com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.9.7</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.0.RELEASE/org.springframework.boot:spring-boot-starter-tomcat:jar:2.1.0.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.0.RELEASE/org.springframework.boot:spring-boot-starter-tomcat:jar:2.1.0.RELEASE/org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.12</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.0.RELEASE/org.springframework.boot:spring-boot-starter-tomcat:jar:2.1.0.RELEASE/org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.12</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.0.RELEASE/org.springframework.boot:spring-boot-starter-tomcat:jar:2.1.0.RELEASE/org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.12</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.0.RELEASE/org.hibernate.validator:hibernate-validator:jar:6.0.13.Final</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.0.RELEASE/org.hibernate.validator:hibernate-validator:jar:6.0.13.Final/javax.validation:validation-api:jar:2.0.1.Final</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.0.RELEASE/org.hibernate.validator:hibernate-validator:jar:6.0.13.Final/org.jboss.logging:jboss-logging:jar:3.3.2.Final</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.0.RELEASE/org.hibernate.validator:hibernate-validator:jar:6.0.13.Final/com.fasterxml:classmate:jar:1.4.0</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.0.RELEASE/org.springframework:spring-web:jar:5.1.2.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.0.RELEASE/org.springframework:spring-webmvc:jar:5.1.2.RELEASE</node>
+            <node x="" y="">org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:1.3.2</node>
+            <node x="" y="">org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:1.3.2/org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:1.3.2</node>
+            <node x="" y="">org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:1.3.2/org.mybatis:mybatis:jar:3.4.6</node>
+            <node x="" y="">org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:1.3.2/org.mybatis:mybatis-spring:jar:1.3.2</node>
+            <node x="" y="">org.apache.shiro:shiro-core:jar:1.3.2</node>
+            <node x="" y="">org.apache.shiro:shiro-core:jar:1.3.2/org.slf4j:slf4j-api:jar:1.7.25</node>
+            <node x="" y="">org.apache.shiro:shiro-core:jar:1.3.2/commons-beanutils:commons-beanutils:jar:1.8.3</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.1.0.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.1.0.RELEASE/org.thymeleaf:thymeleaf-spring5:jar:3.0.11.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.1.0.RELEASE/org.thymeleaf:thymeleaf-spring5:jar:3.0.11.RELEASE/org.thymeleaf:thymeleaf:jar:3.0.11.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.1.0.RELEASE/org.thymeleaf:thymeleaf-spring5:jar:3.0.11.RELEASE/org.thymeleaf:thymeleaf:jar:3.0.11.RELEASE/org.attoparser:attoparser:jar:2.0.5.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.1.0.RELEASE/org.thymeleaf:thymeleaf-spring5:jar:3.0.11.RELEASE/org.thymeleaf:thymeleaf:jar:3.0.11.RELEASE/org.unbescape:unbescape:jar:1.1.6.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.1.0.RELEASE/org.thymeleaf.extras:thymeleaf-extras-java8time:jar:3.0.1.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-redis:jar:2.1.0.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-redis:jar:2.1.0.RELEASE/org.springframework.data:spring-data-redis:jar:2.1.2.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-redis:jar:2.1.0.RELEASE/org.springframework.data:spring-data-redis:jar:2.1.2.RELEASE/org.springframework.data:spring-data-keyvalue:jar:2.1.2.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-redis:jar:2.1.0.RELEASE/org.springframework.data:spring-data-redis:jar:2.1.2.RELEASE/org.springframework.data:spring-data-keyvalue:jar:2.1.2.RELEASE/org.springframework.data:spring-data-commons:jar:2.1.2.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-redis:jar:2.1.0.RELEASE/org.springframework.data:spring-data-redis:jar:2.1.2.RELEASE/org.springframework:spring-oxm:jar:5.1.2.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-redis:jar:2.1.0.RELEASE/io.lettuce:lettuce-core:jar:5.1.2.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-redis:jar:2.1.0.RELEASE/io.lettuce:lettuce-core:jar:5.1.2.RELEASE/io.projectreactor:reactor-core:jar:3.2.2.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-redis:jar:2.1.0.RELEASE/io.lettuce:lettuce-core:jar:5.1.2.RELEASE/io.projectreactor:reactor-core:jar:3.2.2.RELEASE/org.reactivestreams:reactive-streams:jar:1.0.2</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-redis:jar:2.1.0.RELEASE/io.lettuce:lettuce-core:jar:5.1.2.RELEASE/io.netty:netty-common:jar:4.1.29.Final</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-redis:jar:2.1.0.RELEASE/io.lettuce:lettuce-core:jar:5.1.2.RELEASE/io.netty:netty-transport:jar:4.1.29.Final</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-redis:jar:2.1.0.RELEASE/io.lettuce:lettuce-core:jar:5.1.2.RELEASE/io.netty:netty-transport:jar:4.1.29.Final/io.netty:netty-buffer:jar:4.1.29.Final</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-redis:jar:2.1.0.RELEASE/io.lettuce:lettuce-core:jar:5.1.2.RELEASE/io.netty:netty-transport:jar:4.1.29.Final/io.netty:netty-resolver:jar:4.1.29.Final</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-redis:jar:2.1.0.RELEASE/io.lettuce:lettuce-core:jar:5.1.2.RELEASE/io.netty:netty-handler:jar:4.1.29.Final</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-redis:jar:2.1.0.RELEASE/io.lettuce:lettuce-core:jar:5.1.2.RELEASE/io.netty:netty-handler:jar:4.1.29.Final/io.netty:netty-codec:jar:4.1.29.Final</node>
+            <node x="" y="">com.alibaba:druid:jar:1.0.20</node>
+            <node x="" y="">com.alibaba:druid:jar:1.0.20/com.alibaba:jconsole:jar:1.8.0</node>
+            <node x="" y="">com.alibaba:druid:jar:1.0.20/com.alibaba:tools:jar:1.8.0</node>
+            <node x="" y="">mysql:mysql-connector-java:jar:8.0.13</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.0.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.0.RELEASE/org.springframework.boot:spring-boot-test:jar:2.1.0.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.0.RELEASE/org.springframework.boot:spring-boot-test-autoconfigure:jar:2.1.0.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.0.RELEASE/com.jayway.jsonpath:json-path:jar:2.4.0</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.0.RELEASE/com.jayway.jsonpath:json-path:jar:2.4.0/net.minidev:json-smart:jar:2.3</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.0.RELEASE/com.jayway.jsonpath:json-path:jar:2.4.0/net.minidev:json-smart:jar:2.3/net.minidev:accessors-smart:jar:1.2</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.0.RELEASE/com.jayway.jsonpath:json-path:jar:2.4.0/net.minidev:json-smart:jar:2.3/net.minidev:accessors-smart:jar:1.2/org.ow2.asm:asm:jar:5.0.4</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.0.RELEASE/junit:junit:jar:4.12</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.0.RELEASE/org.assertj:assertj-core:jar:3.11.1</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.0.RELEASE/org.mockito:mockito-core:jar:2.23.0</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.0.RELEASE/org.mockito:mockito-core:jar:2.23.0/net.bytebuddy:byte-buddy:jar:1.9.3</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.0.RELEASE/org.mockito:mockito-core:jar:2.23.0/net.bytebuddy:byte-buddy-agent:jar:1.9.3</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.0.RELEASE/org.mockito:mockito-core:jar:2.23.0/org.objenesis:objenesis:jar:2.6</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.0.RELEASE/org.hamcrest:hamcrest-core:jar:1.3</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.0.RELEASE/org.hamcrest:hamcrest-library:jar:1.3</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.0.RELEASE/org.skyscreamer:jsonassert:jar:1.5.0</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.0.RELEASE/org.skyscreamer:jsonassert:jar:1.5.0/com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.0.RELEASE/org.springframework:spring-core:jar:5.1.2.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.0.RELEASE/org.springframework:spring-core:jar:5.1.2.RELEASE/org.springframework:spring-jcl:jar:5.1.2.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.0.RELEASE/org.springframework:spring-test:jar:5.1.2.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.0.RELEASE/org.xmlunit:xmlunit-core:jar:2.6.2</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.031081624447125" x="7460.008852318371" y="933.0641110634481" />
+          <SelectedNodes />
+          <Categories />
+          <VISIBILITY>All</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/gateway/error.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mybatis-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wisdombrain/system/SystemApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-495">
+          <caret line="39" column="34" lean-forward="true" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wisdombrain/system/config/shiroConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-486">
+          <caret line="41" column="65" selection-start-line="41" selection-start-column="52" selection-end-line="41" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wisdombrain/system/config/myExceptionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wisdombrain/system/config/druidConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-120">
+          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wisdombrain/system/realm/shiroRealm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wisdombrain/system/mapper/userMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="27" column="58" lean-forward="true" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wisdombrain/system/service/userService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wisdombrain/system/service/baseService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wisdombrain/system/serviceImpl/userServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wisdombrain/system/serviceImpl/baseServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="30" column="13" lean-forward="true" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wisdombrain/system/controller/loginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="86" column="5" lean-forward="true" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3489#3490#0" expanded="true" />
+            <element signature="e#3527#3528#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wisdombrain/system/config/redisConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
