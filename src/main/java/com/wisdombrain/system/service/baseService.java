@@ -1,16 +1,22 @@
 package com.wisdombrain.system.service;
 
-import com.wisdombrain.system.entities.Vuser;
 import net.sf.json.JSONObject;
-import org.springframework.web.multipart.MultipartFile;
+import org.apache.shiro.util.ByteSource;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 
-public interface baseService {
-    public Vuser getCurrentVuser();
-    public String getCurrentTime();
-    public String getUUID();
-    public JSONObject uploadFile(MultipartFile file, String path, HttpSession session, HttpServletRequest request);
+/**
+ * @Author: liufan
+ * @Date: 2018/10/17 18:51
+ * @Description:
+ */
+public interface BaseService {
+    public Object Encrypt(String alogrithem, String password, ByteSource salt);
+
+    public Object ConvertSaltByte(String salt);
+
+    public JSONObject getAjaxResult(Boolean mark, int errorCode, String errorMessage);
+
+    public JSONObject getAjaxResultHasObject(Boolean mark, int errorCode, String errorMessage, Object object);
+
+    public Object getAllUrlMapping();
 }
-

@@ -1,20 +1,48 @@
 package com.wisdombrain.system.service;
 
-import com.wisdombrain.system.entities.Permission;
-import com.wisdombrain.system.entities.Vuser;
+
+import com.wisdombrain.system.entities.*;
 
 import java.util.List;
 
-public interface userService {
-    //shiro认证
-    public Vuser getUserToConfirm(String username);
-    //注册验证用户名是否重复
-    public Vuser getVuserToCheckRepeat(String username);
-    //插入拜访用户
-    public void insertVuser(Vuser vuser);
+public interface UserService {
+    public User getUserByUserName(String username);
 
-    //获取权限信息
-    public List<Permission> getPermissionById(int id);
-    //根据uuid获取用户对象
-    public Vuser getVuserByUUID(String uuid);
+    public boolean checkUsername(String username);
+
+    public boolean register(User user);
+
+    public List<Role> getRoleById(String id);
+
+    public int getRoleCount();
+
+    public List<Role> getAllRole();
+
+    public List<Role> getRoleForPage(Page page);
+
+    public List<User> getAllUser();
+
+    public int getUserCount();
+
+    public List<User> getUserForPage(Page page);
+
+    public List<User> getUserForPage(Page page, String search);
+
+    public boolean deleteUser(String id);
+
+    public boolean bindRole(String userid, String roleid);
+
+    public boolean reliveBindRole(String userid, String roleid);
+
+    public boolean savePermission(Permission permission);
+
+    public boolean saveParentPermission(ParentPermission parentPermission);
+
+    public Object getPermissionForTree();
+
+    public Object saveRole(Role role, String[] permissionList);
+
+    public String deleteRole(Role role);
+
+    public List<Permission> getPermissionByRoleId(String roleid);
 }
