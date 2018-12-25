@@ -2,32 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="698c2715-52da-4d64-9f4d-9fa22e20488e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/system.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/system.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wisdombrain/system/controller/loginController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wisdombrain/system/entities/Permission.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wisdombrain/system/entities/Permission.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wisdombrain/system/realm/shiroRealm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wisdombrain/system/realm/shiroRealm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wisdombrain/system/service/baseService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wisdombrain/system/service/userService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wisdombrain/system/serviceImpl/baseServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wisdombrain/system/serviceImpl/userServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wisdombrain/system/SystemApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wisdombrain/system/SystemApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wisdombrain/system/config/myExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wisdombrain/system/config/myExceptionHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wisdombrain/system/config/redisConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wisdombrain/system/config/redisConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wisdombrain/system/config/shiroConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wisdombrain/system/config/shiroConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wisdombrain/system/controller/loginController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wisdombrain/system/entities/Permission.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wisdombrain/system/entities/Permission.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wisdombrain/system/entities/Vuser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wisdombrain/system/entities/Vuser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wisdombrain/system/mapper/userMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wisdombrain/system/mapper/userMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wisdombrain/system/realm/shiroRealm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wisdombrain/system/realm/shiroRealm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wisdombrain/system/service/baseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wisdombrain/system/service/baseService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wisdombrain/system/service/userService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wisdombrain/system/service/userService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wisdombrain/system/serviceImpl/baseServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wisdombrain/system/serviceImpl/userServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wisdombrain/system/serviceImpl/userServiceImpl.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -107,6 +82,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="java" value="36" />
+          <entry key="txt" value="17" />
           <entry key="xml" value="4" />
           <entry key="yml" value="21" />
         </counts>
@@ -114,6 +90,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="36" />
+          <entry key="PLAIN_TEXT" value="17" />
           <entry key="XML" value="4" />
           <entry key="YAML" value="21" />
         </counts>
@@ -178,8 +155,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wisdombrain/system/entities/Role.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state relative-caret-position="216">
+              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -312,9 +289,11 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="width" value="3860" />
-    <option name="height" value="1100" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -471,7 +450,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545720365973" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545721452218" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -530,17 +509,26 @@
       <workItem from="1541401543104" duration="1408000" />
       <workItem from="1541402972371" duration="3428000" />
       <workItem from="1545716169558" duration="104000" />
-      <workItem from="1545716285366" duration="4459000" />
+      <workItem from="1545716285366" duration="5158000" />
     </task>
+    <task id="LOCAL-00001" summary="导入权限相关初始类">
+      <created>1545720843344</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1545720843344</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14617000" />
+    <option name="totallyTimeSpent" value="15316000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="3860" height="1100" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24307036" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -550,14 +538,14 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3136646" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.3286334" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991655" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="9" sideWeight="0.50053304" side_tool="true" visible="true" weight="0.3286334" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32962447" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
@@ -580,6 +568,14 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="导入权限相关初始类" />
+    <option name="LAST_COMMIT_MESSAGE" value="导入权限相关初始类" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/asserts/css/font-awesome.css">
@@ -1042,8 +1038,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wisdombrain/system/entities/Role.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="216">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
         </state>
       </provider>
     </entry>
