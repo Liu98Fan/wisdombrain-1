@@ -7,8 +7,13 @@ spring:
   datasource:
     name: wisdombrain
     url: jdbc:mysql://47.107.117.67:3306/Group2?useSSL=false&useUnicode=true&characterEncoding=utf-8
+<<<<<<< Updated upstream
     username:
     password:
+=======
+    username: root
+    password: 123456
+>>>>>>> Stashed changes
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
     filters: stat
@@ -24,6 +29,7 @@ spring:
     poolPreparedStatements: false
     maxPoolPreparedStatementPerConnectionSize: 200
 
+<<<<<<< Updated upstream
 #  #redis
 #  redis:
 #    host: 47.100.126.191
@@ -34,6 +40,18 @@ spring:
 #      max-idle: 8
 #      min-idle: 0
 #      max-wait: -1
+=======
+  #redis
+  redis:
+    host: 47.100.126.191
+    database: 3
+    port: 6379
+    pool:
+      max-active: 8
+      max-idle: 8
+      min-idle: 0
+      max-wait: -1
+>>>>>>> Stashed changes
 
 #mybatis配置
 mybatis:
