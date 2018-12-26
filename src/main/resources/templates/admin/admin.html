@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>center</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!-- bootstrap样式支持 -->
+    <link rel="stylesheet" th:href="@{/asserts/bootstrap/css/bootstrap.min.css}">
+    <!-- linearicons图标样式支持 -->
+    <link rel="stylesheet" th:href="@{/asserts/linearicons/style.css}">
+    <!-- toastr弹出框样式支持 -->
+    <link rel="stylesheet" th:href="@{/asserts/toastr/toastr.css}">
+    <!-- 后台主CSS文件 -->
+    <link rel="stylesheet" th:href="@{/asserts/css/admin.css}">
+</head>
+<body>
+<div id="wrapper">
+    <!-- 顶部 -->
+    <div th:replace="commons/leftbar::topBar"></div>
+    <!-- 结束 顶部 -->
+    <!-- 左侧菜单 -->
+    <div id="sidebar-nav" class="sidebar" th:replace="commons/leftbar::sideBar(activeUrl='authorityManager')">
+    </div>
+    <!-- 结束 左侧菜单 -->
+
+    <div class="main">
+        <div class="main-content">
+            <div class="container-fluid">
+                <input type="button" onclick="toastr.success('success');" value="测试">
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- Jquery文件 -->
+<script th:src="@{/asserts/js/jquery-3.3.1.min.js}"></script>
+<script th:src="@{/asserts/bootstrap/js/bootstrap.min.js}"></script>
+<script th:src="@{/asserts/js/jquery.slimscroll.js}"></script>
+<script th:src="@{/asserts/toastr/toastr.js}"></script>
+<script>
+    //定义弹出层信息
+    toastr.options.positionClass = 'toast-bottom-center';
+
+</script>
+
+</body>
+</html>
