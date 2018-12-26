@@ -23,8 +23,12 @@ public class User extends BaseEntity {
     private String newdate;
     private ByteSource saltByte = ByteSource.Util.bytes("default");
 
-    public User(String id) {
-        super(id);
+    public String getSalt() {
+        return salt;
+    }
+
+    public void setSalt(String salt) {
+        this.salt = salt;
     }
 
     public User() {
@@ -37,14 +41,6 @@ public class User extends BaseEntity {
 
     public void setSaltByte(ByteSource saltByte) {
         this.saltByte = saltByte;
-    }
-
-    public String getSalt() {
-        return salt;
-    }
-
-    public void setSalt(String salt) {
-        this.salt = salt;
     }
 
     public String getNewdate() {
@@ -104,5 +100,6 @@ public class User extends BaseEntity {
         }
         return pset;
     }
+
 
 }

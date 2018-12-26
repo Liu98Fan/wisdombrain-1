@@ -4,6 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.UUID;
 
+
 public class BaseEntity {
     private String id;
     private int del_flag = 0;
