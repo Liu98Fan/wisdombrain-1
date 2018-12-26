@@ -10,10 +10,6 @@ spring:
 <<<<<<< Updated upstream
     username:
     password:
-=======
-    username: root
-    password: 123456
->>>>>>> Stashed changes
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
     filters: stat

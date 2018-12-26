@@ -1,14 +1,15 @@
 package com.wisdombrain.system.entities;
 
 public class Teacher extends User{
-    private int id;
+    private String id;
 
-    public int getId() {
+    @Override
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    @Override
+    public void setId(String id) {
         this.id = id;
     }
-
 }
