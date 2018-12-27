@@ -9,6 +9,42 @@
     <link rel="stylesheet" th:href="@{/asserts/css/font-awesome.css}" >
     <link rel="stylesheet" th:href="@{/asserts/css/form-elements.css}" >
     <link rel="stylesheet" th:href="@{/asserts/css/login.css}" >
+    <style>
+        body {
+            margin: 50px 0;
+            text-align: center;
+            font-family: "PingFangSC-Regular", "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif;
+        }
+        .btn {
+            border: 1px solid #cccccc;
+            border-radius: 2px;
+            width: 100px;
+            height: 40px;
+            font-size: 16px;
+            color: #666;
+            cursor: pointer;
+            background: white linear-gradient(180deg, #ffffff 0%, #f3f3f3 100%);
+        }
+        .btn:hover {
+            background: white linear-gradient(0deg, #ffffff 0%, #f3f3f3 100%)
+        }
+        #captcha {
+            width: 300px;
+            display: inline-block;
+        }
+        .hide {
+            display: none;
+        }
+        #notice {
+            color: red;
+        }
+        label {
+            vertical-align: top;
+            display: inline-block;
+            width: 80px;
+            text-align: right;
+        }
+    </style>
 </head>
 <body>
 <div class="top-content">
@@ -16,12 +52,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-8 col-sm-offset-2 text">
-                    <h1><strong>个人博客</strong>登录</h1>
+                    <h1><strong>学生实习管理系统</strong>登录</h1>
                     <div class="description">
                         <p>
                             welcome！
-                        </p>
-                        <p th:if="${msg!=null}" style="color: red">[[${msg}]]
                         </p>
                     </div>
                 </div>
@@ -31,33 +65,44 @@
                     <div class="form-top">
                         <div class="form-top-left">
                             <h3>请登录</h3>
-                            <p>输入您的用户名和密码</p>
+                            <p>输入您的学号和密码</p>
                         </div>
                         <div class="form-top-right">
                             <i class="fa fa-key"></i>
                         </div>
                     </div>
                     <div class="form-bottom">
-                        <form role="form" th:action="@{/login}" th:method="POST" class="login-form">
                             <div class="form-group">
-                                <label class="sr-only" for="form-username">用户名</label>
-                                <input type="text" name="username" th:placeholder="用户名..." class="form-username form-control" id="form-username" onblur="check();">
+                                <label class="sr-only" for="form-username">学号</label>
+                                <input type="text" name="number" th:placeholder="学号..." class="form-username form-control" id="form-username" onblur="check();">
                             </div>
                             <div class="form-group">
                                 <label class="sr-only" for="form-password">密码</label>
-                                <input type="password" name="password" th:placeholder="密码..." class="form-password form-control" id="form-password">
+                                <input type="password" name="passwd" th:placeholder="密码..." class="form-password form-control" id="form-password">
                             </div>
+                            <div class="form-group">
+                                <select class="form-username form-control" id="role">
+                                    <option value="teacher" selected = "selected">教师</option>
+                                    <option value="student">学生</option>
+                                </select>
+                            </div>
+<!--                            <div class="form-group">
+                                <label class="sr-only" for="form-password">完成验证</label>
+                                <div id="captcha" style="width: 100%;">
+                                </div>
+                            </div>
+                            <p id="notice" class="hide">请先完成验证</p>
                             <div class="checkbox mb-3">
                                 <label>
                                     <input name="rememberMe" type="hidden" th:value="false">
                                     <input type="checkbox" name="rememberMe"  th:value="true">Remember me
                                 </label>
-                            </div>
+                            </div>-->
                             <div class=" mb-3">
                                 <p type="text" name="register" >若无账号请先注册<a style="float: right;" th:href="@{/signup}">注册</a></p>
                             </div>
-                            <button type="submit" class="btn">登录</button>
-                        </form>
+                            <input type="hidden" value="" id="register"/>
+                            <button onclick="checkUser();" class="btn" style="width: 100%;">登录</button>
                     </div>
                 </div>
             </div>
@@ -71,14 +116,53 @@
 <script th:src="@{/asserts/js/jquery.backstretch.min.js}"></script>
 <script th:src="@{/asserts/js/respond.min.js}"></script>
 <script th:src="@{/asserts/js/scripts.js}"></script>
+<script th:src="@{/asserts/js/gt.js}"></script>
 <script>
+    function checkUser() {
+        $.ajax({
+            type:'post',
+            url:"/hasRegister",
+            data:{"number":$("#form-username").val(),"role":$("#role").val()},
+            dataType:"JSON",
+            async:false,
+            success:function (data) {
+                var msg = data[0];
+                for(var key in msg){
+                    if(key == "FAIL"){
+                        alert(msg[key]);
+                        $("#register").val(key);
+                    }
+                }
+                if($("#register").val() == ""){
+                    $.ajax({
+                        type:'post',
+                        url:"/login",
+                        data:{"number":$("#form-username").val(),"passwd":$("#form-password").val(),"role":$("#role").val()},
+                        dataType:"JSON",
+                        success:function (data) {
+                            var msg = data[0];
+                            for(var key in msg){
+                                if(key == "SUCCESS"){
+                                    window.location.href = "http://www.baidu.com";
+                                    break;
+                                }else if(key != "DATE"){
+                                    alert(msg[key]);
+                                }
+                            }
+                        }
+                    });
+                }
+                $("#register").val("");
+            }
+        });
+    }
     function check(){
         if($("#form-username").val()!=null&&$("#form-username").val()!=""){
             var name = $("#form-username").val();
             var patrn=/[`~!@#$%^&*()_+<>?:"{},.\/;'[\]]/im;
             var myReg = /^[a-zA-Z0-9_]{0,}$/;
             if(patrn.test(name)||!myReg.test(name)){
-                alert("提示信息：用户名不得含有非法字符和中文！");
+                alert("提示信息：学号不得含有非法字符和中文！");
                 $("#form-username").val("");
             }
         }
