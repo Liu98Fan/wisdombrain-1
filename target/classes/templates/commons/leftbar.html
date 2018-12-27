@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/pageResources/assets/vendor/linearicons/style.css">
     <link rel="stylesheet" href="/pageResources/assets/vendor/toastr/toastr.min.css">
     <link rel="stylesheet" href="/pageResources/layui/css/layui.css">
-    <link rel="stylesheet" href="/pageResources/css/editormd.css" />
+    <link rel="stylesheet" href="/pageResources/css/editormd.css"/>
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="/pageResources/assets/css/main.css">
     <!-- GOOGLE FONTS -->
@@ -23,7 +23,7 @@
 </head>
 <body>
 <div id="sidebar-nav" class="sidebar" th:fragment="sideBar">
-    <div class="sidebar-scroll" >
+    <div class="sidebar-scroll">
         <nav>
             <ul class="nav li-list">
                 <li><a th:href="@{/center/entrance}" th:class="${activeUrl=='center'?'active':''}" class="active"><i
@@ -40,12 +40,17 @@
                         class="lnr lnr-home"></i> <span>日迹管理</span></a></li>
 
                 <li shiro:hasRole="superAdmin">
-                    <a href="#permissionPages" data-toggle="collapse"th:classappend="${activeUrl=='userManager'?'active':''}" class="collapsed" aria-expanded="false"><i class="lnr lnr-cog"></i> <span>权限管理</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+                    <a href="#permissionPages" data-toggle="collapse"
+                       th:classappend="${activeUrl=='userManager'?'active':''}" class="collapsed" aria-expanded="false"><i
+                            class="lnr lnr-cog"></i> <span>权限管理</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
                     <div id="permissionPages" class="collapse">
                         <ul class="nav li-list">
-                            <li><a href="/manager/userManager" th:class="${activeUrl=='userManager'?'active':''}">用户管理</a></li>
-                            <li><a href="/manager/roleManager" th:class="${activeUrl=='roleManager'?'active':''}">角色管理</a></li>
-                            <li><a href="/manager/authorityManager" th:class="${activeUrl=='authorityManager'?'active':''}">权限管理</a></li>
+                            <li><a href="/manager/userManager"
+                                   th:class="${activeUrl=='userManager'?'active':''}">用户管理</a></li>
+                            <li><a href="/manager/roleManager"
+                                   th:class="${activeUrl=='roleManager'?'active':''}">角色管理</a></li>
+                            <li><a href="/manager/authorityManager"
+                                   th:class="${activeUrl=='authorityManager'?'active':''}">权限管理</a></li>
                         </ul>
                     </div>
                 </li>
@@ -72,7 +77,9 @@
             </div>
         </form>
         <div class="navbar-btn navbar-btn-right">
-            <a class="btn btn-success update-pro" href="#downloads/klorofil-pro-bootstrap-admin-dashboard-template/?utm_source=klorofil&utm_medium=template&utm_campaign=KlorofilPro" title="Upgrade to Pro" target="_blank"><i class="fa fa-rocket"></i> <span>UPGRADE TO PRO</span></a>
+            <a class="btn btn-success update-pro"
+               href="#downloads/klorofil-pro-bootstrap-admin-dashboard-template/?utm_source=klorofil&utm_medium=template&utm_campaign=KlorofilPro"
+               title="Upgrade to Pro" target="_blank"><i class="fa fa-rocket"></i> <span>UPGRADE TO PRO</span></a>
         </div>
         <div id="navbar-menu">
             <ul class="nav navbar-nav navbar-right">
@@ -81,21 +88,23 @@
                         <i class="lnr lnr-alarm"></i>
                         <span class="badge bg-danger">角色信息</span>
                     </a>
-                    <ul class="dropdown-menu notifications" >
+                    <ul class="dropdown-menu notifications">
 
                     </ul>
                 </li>
 
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="lnr lnr-question-circle"></i> <span>授权信息（未去重）</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="lnr lnr-question-circle"></i>
+                        <span>授权信息（未去重）</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
                     <ul class="dropdown-menu">
 
                     </ul>
                 </li>
                 <li class="dropdown">
 
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img th:src="@{/pageResources/assets/img/user.png}">
-                                                                                     <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img
+                            th:src="@{/pageResources/assets/img/user.png}">
+                        <i class="icon-submenu lnr lnr-chevron-down"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="#"><i class="lnr lnr-user"></i> <span>My Profile</span></a></li>
                         <li><a href="#"><i class="lnr lnr-envelope"></i> <span>Message</span></a></li>
@@ -119,10 +128,10 @@
 <script src="/pageResources/layui/layui.js"></script>
 <script src="/pageResources/js/editormd.js"></script>
 <script>
-    $(".li-list").on("click","a",function () {
+    $(".li-list").on("click", "a", function () {
         button = $(this);
-        $(".li-list").find("a").attr("class","");
-        button.attr("class","active");
+        $(".li-list").find("a").attr("class", "");
+        button.attr("class", "active");
     })
 
 
