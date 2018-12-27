@@ -98,7 +98,8 @@
                             for(var key in msg){
                                 if(key == "FAIL"){
                                     alert(msg[key]);
-                                }else{
+                                    break;
+                                }else if(key == "SUCCESS"){
                                     $("#exist").val(key);
                                 }
                             }
