@@ -7,10 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <!-- bootstrap样式支持 -->
     <link rel="stylesheet" th:href="@{/asserts/bootstrap/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/asserts/bootstrap/css/bootstrap-table.css}" >
+    <link rel="stylesheet" th:href="@{/asserts/bootstrap/css/bootstrap-treeview.css}" >
     <!-- linearicons图标样式支持 -->
     <link rel="stylesheet" th:href="@{/asserts/linearicons/style.css}">
     <!-- toastr弹出框样式支持 -->
     <link rel="stylesheet" th:href="@{/asserts/toastr/toastr.css}">
+
     <!-- 后台主CSS文件 -->
     <link rel="stylesheet" th:href="@{/asserts/css/admin.css}">
 </head>
@@ -36,8 +39,12 @@
 <!-- Jquery文件 -->
 <script th:src="@{/asserts/js/jquery-3.3.1.min.js}"></script>
 <script th:src="@{/asserts/bootstrap/js/bootstrap.min.js}"></script>
+<script th:src="@{/asserts/bootstrap/js/bootstrap-table.js}" ></script>
+<script th:src="@{/asserts/bootstrap/js/bootstrap-treeview.js}" ></script>
+<script th:src="@{/asserts/bootstrap/js/bootstrap-table-zh-CN.js}" ></script>
 <script th:src="@{/asserts/js/jquery.slimscroll.js}"></script>
 <script th:src="@{/asserts/toastr/toastr.js}"></script>
+<script th:src="@{/asserts/js/confirmBox.js}"></script>
 <script>
     //定义弹出层信息
     toastr.options.positionClass = 'toast-bottom-center';

@@ -34,9 +34,10 @@ public class MyMvcConfig implements WebMvcConfigurer {
         WebMvcConfigurer configurer = new WebMvcConfigurer() {
             @Override
             public void addViewControllers(ViewControllerRegistry registry) {
-                registry.addViewController("/main.html").setViewName("redirect:/main/entrance");
-                registry.addViewController("/").setViewName("welcome.html");
+                registry.addViewController("/login.html").setViewName("redirect:/login/sign");
+                registry.addViewController("/").setViewName("redirect:/login/sign");
                 registry.addViewController("/firstPage").setViewName("redirect:/");
+                registry.addViewController("/admin").setViewName("admin/admin.html");
 //                registry.addViewController("index").setViewName("redirect:/center/entrance");
             }
 

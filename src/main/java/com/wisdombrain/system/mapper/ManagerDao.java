@@ -66,7 +66,7 @@ public interface ManagerDao {
             "where c.id =#{parent}")
     public List<Permission> getSonAuthorityForTable(String parent);
 
-    @Select("select count(*) from (SELECT DISTINCT parentMapping FROM url_tb where del_flag = 0) parent_tb")
+    @Select("select count(*) from parent_permission_tb where del_flag = 0")
     public int getParentAuthorityCount();
 
     @Select("call saveParentMapping(#{id},#{date},#{del_flag},#{url},#{isAuthority},#{describe})")

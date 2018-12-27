@@ -14,7 +14,7 @@ public interface ManagerService {
 
     public boolean deleteUser(String id);
 
-    public boolean saveMapping();
+   // public boolean saveMapping();
 
     public int getAuthorityCount();
 
@@ -26,5 +26,5 @@ public interface ManagerService {
 
     public int getParentAuthorityCount();
 
-    public boolean saveParentUrl(UrlMapping parentUrl);
+   // public boolean saveParentUrl(UrlMapping parentUrl);
 }

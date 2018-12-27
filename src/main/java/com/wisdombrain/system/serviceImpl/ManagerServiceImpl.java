@@ -52,37 +52,6 @@ public class ManagerServiceImpl implements ManagerService {
     }
 
 
-    @Override
-    //@Before(value = "execution(* cn.bestrivenlf.myweb.controller.ManagerController.getParentAuthorityForTable(..))")
-    public boolean saveMapping() {
-        JSONArray jsonArray = (JSONArray) baseService.getAllUrlMapping();
-        boolean mark = true;
-        for (Object object : jsonArray) {
-            JSONObject jsonObject = (JSONObject) object;
-            UrlMapping urlMapping = new UrlMapping();
-            urlMapping.setClassName(jsonObject.getString("className"));
-            urlMapping.setIsAuthority(0);
-            urlMapping.setMethodName(jsonObject.getString("method"));
-            urlMapping.setUrl(jsonObject.getString("url"));
-            String url = urlMapping.getUrl();
-            String parentUrl = url.split("/")[1];
-            //这里可能会抛出ArrayIndexOutOfBoundsException
-            String sonUrl = null;
-            try {
-                sonUrl = url.split("/")[2];
-            } catch (ArrayIndexOutOfBoundsException e) {
-                continue;
-            }
-            urlMapping.setParentMapping(parentUrl);
-            urlMapping.setSonMapping(sonUrl);
-            String s = managerDao.saveMapping(urlMapping);
-            if (s.equals("error")) {
-                mark = false;
-            }
-        }
-        return mark;
-    }
-
     /**
      * 获取urlMapping的总数
      *
@@ -125,8 +94,8 @@ public class ManagerServiceImpl implements ManagerService {
         return managerDao.getParentAuthorityCount();
     }
 
-    @Override
-    public boolean saveParentUrl(UrlMapping parentUrl) {
-        return managerDao.saveParentUrl(parentUrl).equals("succ") ? true : false;
-    }
+//    @Override
+//    public boolean saveParentUrl(UrlMapping parentUrl) {
+//        return managerDao.saveParentUrl(parentUrl).equals("succ") ? true : false;
+//    }
 }

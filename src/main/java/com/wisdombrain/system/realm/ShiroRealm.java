@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Set;
 
-public class shiroRealm extends AuthorizingRealm {
+public class ShiroRealm extends AuthorizingRealm {
 
     @Autowired
     UserServiceImpl userService;
@@ -43,7 +43,7 @@ public class shiroRealm extends AuthorizingRealm {
         UsernamePasswordToken token = (UsernamePasswordToken) authenticationToken;
         String username = token.getUsername();
         User user = userService.getUserByUserName(username);
-        if (user != null) {
+        if (null !=user) {
             //查到相关信息
             Object principal = user;
             //这里的密码是从数据库查询出来的正确的密码

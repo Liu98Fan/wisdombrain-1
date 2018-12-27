@@ -8,6 +8,7 @@
     <link rel="stylesheet" th:href="@{/asserts/bootstrap/css/bootstrap.css}" >
     <link rel="stylesheet" th:href="@{/asserts/css/font-awesome.css}" >
     <link rel="stylesheet" th:href="@{/asserts/css/form-elements.css}" >
+    <link rel="stylesheet" th:href="@{/asserts/toastr/toastr.css}">
     <link rel="stylesheet" th:href="@{/asserts/css/login.css}" >
     <style>
         body {
@@ -72,21 +73,22 @@
                         </div>
                     </div>
                     <div class="form-bottom">
+                        <form action="/user/login" onsubmit="return ifSubmit();">
                             <div class="form-group">
                                 <label class="sr-only" for="form-username">学号</label>
-                                <input type="text" name="number" th:placeholder="学号..." class="form-username form-control" id="form-username" onblur="check();">
+                                <input type="text" name="username" th:placeholder="学号..." class="form-username form-control" id="form-username" required onblur="check();">
                             </div>
                             <div class="form-group">
                                 <label class="sr-only" for="form-password">密码</label>
-                                <input type="password" name="passwd" th:placeholder="密码..." class="form-password form-control" id="form-password">
+                                <input type="password" name="password" th:placeholder="密码..." class="form-password form-control" id="form-password" required>
                             </div>
                             <div class="form-group">
-                                <select class="form-username form-control" id="role">
+                                <select class="form-username form-control" name="roleName" id="role">
                                     <option value="teacher" selected = "selected">教师</option>
                                     <option value="student">学生</option>
                                 </select>
                             </div>
-<!--                            <div class="form-group">
+                           <div class="form-group">
                                 <label class="sr-only" for="form-password">完成验证</label>
                                 <div id="captcha" style="width: 100%;">
                                 </div>
@@ -97,12 +99,13 @@
                                     <input name="rememberMe" type="hidden" th:value="false">
                                     <input type="checkbox" name="rememberMe"  th:value="true">Remember me
                                 </label>
-                            </div>-->
+                            </div>
                             <div class=" mb-3">
                                 <p type="text" name="register" >若无账号请先注册<a style="float: right;" th:href="@{/signup}">注册</a></p>
                             </div>
                             <input type="hidden" value="" id="register"/>
-                            <button onclick="checkUser();" class="btn" style="width: 100%;">登录</button>
+                            <button  id="submit"type="submit"  class="btn" style="width: 100%;">登录</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -116,44 +119,92 @@
 <script th:src="@{/asserts/js/jquery.backstretch.min.js}"></script>
 <script th:src="@{/asserts/js/respond.min.js}"></script>
 <script th:src="@{/asserts/js/scripts.js}"></script>
+<script th:src="@{/asserts/toastr/toastr.js}"></script>
 <script th:src="@{/asserts/js/gt.js}"></script>
-<script>
-    function checkUser() {
-        $.ajax({
-            type:'post',
-            url:"/hasRegister",
-            data:{"number":$("#form-username").val(),"role":$("#role").val()},
-            dataType:"JSON",
-            async:false,
-            success:function (data) {
-                var msg = data[0];
-                for(var key in msg){
-                    if(key == "FAIL"){
-                        alert(msg[key]);
-                        $("#register").val(key);
-                    }
-                }
-                if($("#register").val() == ""){
-                    $.ajax({
-                        type:'post',
-                        url:"/login",
-                        data:{"number":$("#form-username").val(),"passwd":$("#form-password").val(),"role":$("#role").val()},
-                        dataType:"JSON",
-                        success:function (data) {
-                            var msg = data[0];
-                            for(var key in msg){
-                                if(key == "SUCCESS"){
-                                    window.location.href = "http://www.baidu.com";
-                                    break;
-                                }else if(key != "DATE"){
-                                    alert(msg[key]);
-                                }
-                            }
-                        }
-                    });
-                }
+<script th:inline="javascript">
+    $(document).ready(function(){
+        //ajax先拿到后台数据
+        /*<![CDATA[*/
+        var msg = [[${msg}]];
+        //toastr.error(msg);
+        if(msg!=null){
+            toastr.error(msg);
+        }
+        /*]]>*/
+
+
+    });
+    var handler = function (captchaObj) {
+        $("#submit").click(function (e) {
+            var result = captchaObj.getValidate();
+            if (!result) {
+                $("#notice").toggleClass("hide");
+                e.preventDefault();
             }
         });
+        // 将验证码加到id为captcha的元素里，同时会有三个input的值用于表单提交
+        captchaObj.appendTo("#captcha");
+        captchaObj.onReady(function () {
+            $("#wait").hide();
+        });
+        // 更多接口参考：http://www.geetest.com/install/sections/idx-client-sdk.html
+
+    };
+    $.ajax({
+        url: "/system/loginVerify?t=" + (new Date()).getTime(), // 加随机数防止缓存
+        type: "get",
+        dataType: "json",
+        success: function (data) {
+            // 调用 initGeetest 初始化参数
+            // 参数1：配置参数
+            // 参数2：回调，回调的第一个参数验证码对象，之后可以使用它调用相应的接口
+            initGeetest({
+                    gt: data.gt,
+                    challenge: data.challenge,
+                    new_captcha: data.new_captcha, // 用于宕机时表示是新验证码的宕机
+                    offline: !data.success, // 表示用户后台检测极验服务器是否宕机，一般不需要关注
+                    product: "float", // 产品形式，包括：float，popup
+                    width: "100%"
+                    // 更多配置参数请参见：http://www.geetest.com/install/sections/idx-client-sdk.html#config
+
+                }, handler
+            );
+        }
+    });
+    var usernameCheckMessage = null;
+    var usernameExistMessage = null;
+    function ifSubmit() {
+        //return false;
+        //提交注册信息应当进行以下几步验证
+        //首先非空验证在表单内置中
+        //其次字符验证分为用户名和密码的验证都采用onbulr方式验证
+        //下面判定是否注册
+        isRegister();
+        if(usernameCheckMessage!=true){
+            toastr.error(usernameCheckMessage);
+            return false;
+        }
+        //判断完成进行提交
+        //return true;
+        return true;
+    }
+    function isRegister() {
+        $.ajax({
+            url: "/login/hasRegister",
+            async: false,
+            data: {"username": $("#form-username").val(), "role": $("#role").val()},
+            success: function (data) {
+                if ("FAIL" in data) {
+                    usernameCheckMessage = data["FAIL"];
+                } else {
+                    usernameCheckMessage = true;
+                }
+            },
+            error: function () {
+                usernameCheckMessage = "服务器端错误";
+            }
+        })
+
     }
     function check(){
         if($("#form-username").val()!=null&&$("#form-username").val()!=""){
@@ -161,7 +212,7 @@
             var patrn=/[`~!@#$%^&*()_+<>?:"{},.\/;'[\]]/im;
             var myReg = /^[a-zA-Z0-9_]{0,}$/;
             if(patrn.test(name)||!myReg.test(name)){
-                alert("提示信息：学号不得含有非法字符和中文！");
+                toastr.error("提示信息：学号不得含有非法字符和中文！");
                 $("#form-username").val("");
             }
         }

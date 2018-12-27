@@ -39,7 +39,8 @@ public class UserController {
         if (!subject.isAuthenticated()) {
             try {
                 if (isEncrypt.equals("0")) {
-                    password = baseService.Encrypt("MD5", password, (ByteSource) baseService.ConvertSaltByte(username)).toString();
+                    User user = userService.getUserByUserName(username);
+                    password = baseService.Encrypt("MD5", password, (ByteSource) baseService.ConvertSaltByte(user.getSalt())).toString();
                 }
                 UsernamePasswordToken token = new UsernamePasswordToken(username, password);
                 subject.login(token);
@@ -57,12 +58,10 @@ public class UserController {
                 model.addAttribute("msg", e.getMessage());
             } catch (IncorrectCredentialsException e) {
                 model.addAttribute("msg", "用户名或密码错误");
-            } catch (NullPointerException e) {
-
             } catch (Exception e) {
                 model.addAttribute("msg", "未知错误:" + e.getMessage());
             }
-            return "login";
+            return "gateway/login";
         }
 
         return "redirect:/main/entrance";
@@ -70,12 +69,12 @@ public class UserController {
 
     @RequestMapping("/registerEntrance")
     public String registerEntrance() {
-        return "register";
+        return "gateway/register";
     }
 
     @RequestMapping("/loginEntrance")
     public String loginEntrance() {
-        return "login";
+        return "gateway/login";
     }
 
     /**
@@ -113,7 +112,7 @@ public class UserController {
     public String logOut(HttpSession session) {
         Subject subject = SecurityUtils.getSubject();
         subject.logout();
-        return "redirect:/user/loginEntrance";
+        return "redirect:/sign";
     }
 
     /**

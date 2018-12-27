@@ -38,7 +38,6 @@ public class BaseServiceImpl implements BaseService {
     }
 
     @Override
-    @CachePut(cacheNames = "userTime")
     public String getCurrentTime() {
         Date date = new Date();
         SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");

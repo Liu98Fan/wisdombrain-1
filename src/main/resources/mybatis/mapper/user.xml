@@ -9,9 +9,9 @@
     <select id="getStudentInfoToCheck" resultType="com.wisdombrain.system.entities.User">
         CALL getNumberToCheck(#{role},#{number});
     </select>
-    <insert id="insertUser">
-        CALL insertUser(#{number},#{passwd},#{salt},#{date},#{del_flag},#{role});
-    </insert>
+    <select id="insertUser" resultType="String">
+        CALL insertUser(#{id},#{number},#{passwd},#{salt},#{date},#{newdate},#{del_flag},#{role});
+    </select>
     <select id="getUser" resultType="com.wisdombrain.system.entities.User">
         CALL getUserToLogin(#{number},#{role});
     </select>

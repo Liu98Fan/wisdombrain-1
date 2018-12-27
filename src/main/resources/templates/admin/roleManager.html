@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>center</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!-- bootstrap样式支持 -->
+    <link rel="stylesheet" th:href="@{/asserts/bootstrap/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/asserts/bootstrap/css/bootstrap-table.css}" >
+    <link rel="stylesheet" th:href="@{/asserts/bootstrap/css/bootstrap-treeview.css}" >
+    <!-- linearicons图标样式支持 -->
+    <link rel="stylesheet" th:href="@{/asserts/linearicons/style.css}">
+    <!-- toastr弹出框样式支持 -->
+    <link rel="stylesheet" th:href="@{/asserts/toastr/toastr.css}">
+
+    <!-- 后台主CSS文件 -->
+    <link rel="stylesheet" th:href="@{/asserts/css/admin.css}">
+</head>
+<body>
+<div id="wrapper">
+    <!-- 顶部 -->
+    <div th:replace="commons/leftbar::topBar"></div>
+    <!-- 结束 顶部 -->
+    <!-- 左侧菜单 -->
+    <div id="sidebar-nav" class="sidebar" th:replace="commons/leftbar::sideBar(activeUrl='roleManager')">
+    </div>
+    <!-- 结束 左侧菜单 -->
+
+    <div class="main">
+        <div class="main-content">
+            <div id="toolbar_role" class="btn-group">
+                <button id="btn_add_role" type="button" class="btn btn-default"  onclick="initializerTree()" data-toggle="modal" data-target="#myModal">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>添加角色
+                </button>
+                <button id="btn_delete_role" type="button" class="btn btn-default" onclick="">
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>删除角色
+                </button>
+            </div>
+            <div class="container-fluid">
+                <table id="tb_roles"></table>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">角色信息查询</h4>
+                </div>
+                <form class="form-horizontal" onsubmit="return false">
+                    <div class="modal-body" id="roleDisplay">
+                        <div class="form-group">
+                            <input type="hidden" value="" id="id">
+                            <label  class="col-sm-2 control-label">角色名称</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="role" value=""  required>
+                                <span style="color:red">开头字母小写，不得使用中文字符，例子:user</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label  class="col-sm-2 control-label">角色描述</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="describe" value=""  required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label  class="col-sm-2 control-label">权限绑定</label>
+                            <div class="col-sm-10">
+                                <!--<input type="text" class="form-control" id="permission" value=""  required>-->
+                                <div id="permission_tree"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button"  class="btn btn-primary" data-dismiss="modal">Close</button>
+                        <button type="submit"  class="btn btn-success" onclick="saveRole()">提交</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- Jquery文件 -->
+<script th:src="@{/asserts/js/jquery-3.3.1.min.js}"></script>
+<script th:src="@{/asserts/bootstrap/js/bootstrap.min.js}"></script>
+<script th:src="@{/asserts/bootstrap/js/bootstrap-table.js}" ></script>
+<script th:src="@{/asserts/bootstrap/js/bootstrap-treeview.js}" ></script>
+<script th:src="@{/asserts/bootstrap/js/bootstrap-table-zh-CN.js}" ></script>
+<script th:src="@{/asserts/js/jquery.slimscroll.js}"></script>
+<script th:src="@{/asserts/toastr/toastr.js}"></script>
+<script th:src="@{/asserts/js/confirmBox.js}"></script>
+<script>
+    //定义弹出层信息
+    toastr.options.positionClass = 'toast-bottom-center';
+    //初始化bootstraptable
+    $(function init() {
+
+        //1.初始化Table
+        var oTable = new TableInit();
+        oTable.Init();
+
+    });
+    var TableInit = function () {
+        var oTableInit = new Object();
+        //初始化Table
+        oTableInit.Init = function () {
+            $('#tb_roles').bootstrapTable({
+                url: '/manager/getRoles',         //请求后台的URL（*）
+                method: 'get',                      //请求方式（*）
+                toolbar: '#toolbar_role',                //工具按钮用哪个容器
+                striped: true,                      //是否显示行间隔色
+                cache: false,                       //是否使用缓存，默认为true，所以一般情况下需要设置一下这个属性（*）
+                pagination: true,                   //是否显示分页（*）
+                sortable: false,                     //是否启用排序
+                sortOrder: "asc",                   //排序方式
+                queryParams: oTableInit.queryParams,//传递参数（*）
+                sidePagination: "server",           //分页方式：client客户端分页，server服务端分页（*）
+                pageNumber:1,                       //初始化加载第一页，默认第一页
+                pageSize: 10,                       //每页的记录行数（*）
+                pageList: [10, 25, 50, 100],        //可供选择的每页的行数（*）
+                search: false,                       //是否显示表格搜索，此搜索是客户端搜索，不会进服务端，所以，个人感觉意义不大
+                strictSearch: true,
+                showColumns: true,                  //是否显示所有的列
+                showRefresh: true,                  //是否显示刷新按钮
+                minimumCountColumns: 2,             //最少允许的列数
+                clickToSelect: true,                //是否启用点击选中行
+                height: 500,                        //行高，如果没有设置height属性，表格自动根据记录条数觉得表格高度
+                uniqueId: "ID",                     //每一行的唯一标识，一般为主键列
+                showToggle:true,                    //是否显示详细视图和列表视图的切换按钮
+                cardView: false,                    //是否显示详细视图
+                detailView: false,                   //是否显示父子表
+                columns: [{
+                    checkbox: true
+                },  {
+                    field: 'role',
+                    title: '角色名'
+                }, {
+                    field: 'describe',
+                    title: '描述'
+                }, {
+                    field: 'date',
+                    title: '创建日期'
+                }, {
+                    field: 'id',
+                    title: '操作',
+                    align: 'center',
+                    valign: 'middle',
+                    formatter: actionFormatter
+                }]
+            });
+        };
+        //操作栏的格式化
+        function actionFormatter(value, row, index) {
+            var id = value;
+            var result = "";
+            result +=
+                "<a href='javascript:;'  onclick=\"bindAuthority(this,'" + id +
+                "')\"class='btn btn-xs btn-success mr-20' data-toggle=\"modal\" data-target=\"#myModal\"><span class='glyphicon glyphicon-pencil'>角色编辑</span></a>";
+            result +=
+                "<a href='javascript:;'  onclick=\"roleDelete(this,'" + id +
+                "')\"class='btn btn-xs btn-danger' ><span class='glyphicon glyphicon-remove'>删除角色</span></a>";
+
+            return result;
+        }
+
+        //得到查询的参数
+        oTableInit.queryParams = function (params) {
+            var temp = {   //这里的键的名字和控制器的变量名必须一直，这边改动，控制器也需要改成一样的
+                limit: params.limit,   //页面大小
+                offset: params.offset,  //页码
+                search: params.search //查询条件
+            };
+            return temp;
+        };
+        return oTableInit;
+    };
+    //删除角色按钮
+    function roleDelete(obj,id) {
+        // alert("还没写呢，快催催我！");
+        var id = id;
+        var roleName = $(obj).parent().prev().prev().prev().html();
+        var describe = $(obj).parent().prev().prev().html();
+        //toastr.success('id='+id);
+        Ewin.confirm({message: "确认要删除选择的角色吗？"}).on(function (e) {
+            if (e) {
+                deleteRole(id,roleName,describe);
+            }
+
+        });
+    }
+    function  deleteRole(id,roleName,describe) {
+        $.ajax({
+            url: "/manager/deleteRole",
+            data: {"id": id,"del_flag":1,"role":roleName,"describe":describe},
+            success: function (data, status) {
+
+                if (data["SUCCESS"] == "succ") {
+                    toastr.success('删除成功！');
+                    // $("#tb_departments").bootstrapTable('refresh');
+                    $("#tb_roles").bootstrapTable('destroy');
+                    var oTable = new TableInit();
+                    oTable.Init();
+                } else if(data["FAIL"]=="error") {
+                    toastr.error("删除失败");
+                }
+            },
+            error: function () {
+                toastr.error('删除失败，请稍后重试');
+            },
+        });
+    }
+    var silentByChild = true;
+    //bootstrap-treeview参数
+    var options = {
+        data: getTree(), //data属性是必须的，是一个对象数组    Array of Objects.
+        color: "", //所有节点使用的默认前景色，这个颜色会被节点数据上的backColor属性覆盖.        String
+        backColor: "white", //所有节点使用的默认背景色，这个颜色会被节点数据上的backColor属性覆盖.     String
+        borderColor: "black", //边框颜色。如果不想要可见的边框，则可以设置showBorder为false。        String
+        nodeIcon: "glyphicon glyphicon-user", //所有节点的默认图标
+        checkedIcon: "glyphicon glyphicon-check", //节点被选中时显示的图标         String
+        collapseIcon: "glyphicon glyphicon-minus", //节点被折叠时显示的图标        String
+        expandIcon: "glyphicon glyphicon-plus", //节点展开时显示的图标        String
+        emptyIcon: "glyphicon", //当节点没有子节点的时候显示的图标              String
+        enableLinks: false, //是否将节点文本呈现为超链接。前提是在每个节点基础上，必须在数据结构中提供href值。        Boolean
+        highlightSearchResults: false, //是否高亮显示被选中的节点        Boolean
+        levels: 2, //设置整棵树的层级数  Integer
+        multiSelect: true, //是否可以同时选择多个节点      Boolean
+        onhoverColor: "#F5F5F5", //光标停在节点上激活的默认背景色      String
+        //selectedIcon: "glyphicon glyphicon-stop", //节点被选中时显示的图标     String
+        searchResultBackColor: "", //当节点被选中时的背景色
+        searchResultColor: "", //当节点被选中时的前景色
+        selectedBackColor: "", //当节点被选中时的背景色
+        //selectedColor: "red", //当节点被选中时的前景色
+        showBorder: true, //是否在节点周围显示边框
+        showCheckbox: true, //是否在节点上显示复选框
+        showIcon: true, //是否显示节点图标
+        showTags: true, //是否显示每个节点右侧的标记。前提是这个标记必须在每个节点基础上提供数据结构中的值。
+        uncheckedIcon: "glyphicon glyphicon-unchecked", //未选中的复选框时显示的图标，可以与showCheckbox一起使用
+        //节点选中事件
+        onNodeChecked:function (event,node) {
+            if(node.nodes!=null){
+                //如果是父节点被选中，则默认选中所有子节点
+                $.each(node.nodes,function (index,item) {
+                    $("#permission_tree").treeview('checkNode',item.nodeId,{silent:true})
+                });
+            }else{
+                //如果是子节点被选中，则
+                // 1、判断是否是最后一个被选中的子节点，如果是则父节点选中
+                // 2、如果不是则不是
+                var parentNode = $("#permission_tree").treeview('getParent', node.nodeId);
+
+                var isAllchecked = true; // 是否全部选中
+                //获取所有子节点的同胞节点
+                var siblings = $("#permission_tree").treeview('getSiblings', node.nodeId);
+                for ( var i in siblings) {
+                    // 有一个没选中，则不是全选
+                    if (!siblings[i].state.checked) {
+                        isAllchecked = false;
+                        break;
+                    }
+                }
+
+                // 全选，则打钩
+                if (isAllchecked) {
+                    $("#permission_tree").treeview('checkNode', parentNode.nodeId, {
+                        silent : true
+                    });
+                }
+            }
+        },
+        //节点取消选中事件
+        onNodeUnchecked : function(event, node) {
+            // 选中的是父节点
+
+            if (node.nodes != null) {
+                // 这里需要控制，判断是否是因为市级节点引起的父节点被取消选中
+                // 如果是，则只管取消父节点就行了
+                // 如果不是，则子节点需要被取消选中
+                if (silentByChild) {
+                    $.each(node.nodes, function(index, value) {
+                        $("#permission_tree").treeview('uncheckNode', value.nodeId, {
+                            silent : true
+                        });
+                    });
+                }
+            } else {
+                // 子节点被取消选中
+
+                var parentNode = $("#permission_tree").treeview('getParent', node.nodeId);
+
+                var isAllUnchecked = true; // 是否全部取消选中
+
+                // 子节点有一个选中，那么就不是全部取消选中
+                var siblings = $("#permission_tree").treeview('getSiblings', node.nodeId);
+                for ( var i in siblings) {
+                    if (siblings[i].state.checked) {
+                        isAllUnchecked = false;
+                        break;
+                    }
+                }
+
+                // 全部取消选中，那么父节点恢复到默认状态
+                if (isAllUnchecked) {
+                    $("#permission_tree").treeview('uncheckNode', parentNode.nodeId, {
+                        silent : true,
+                    });
+
+                }else{
+                    silentByChild = false;
+                    $("#permission_tree").treeview('uncheckNode', parentNode.nodeId, {
+                        silent : true,
+                    });
+
+                }
+            }
+            silentByChild = true;
+        }
+    }
+    //bootstrap-treeview初始化
+    function initializerTree() {
+        //先前一步：清楚modal数据
+        $("#role").removeAttr("disabled");
+        $("#role").val("");
+        $("#describe").val("");
+        $("#id").val("");
+        $('#permission_tree').treeview(options);
+    }
+    //bootstrap-treeview拼接数据
+    function getTree(){
+        var tree = [];
+        //首先ajax往后台取数据
+        $.ajax({
+            url:'/manager/getPermissionForTree',
+            async:false,
+            success:function (data) {
+                //alert(data);
+                //var data = jQuery.parseJSON(data);
+
+                $(data).each(function (index,item) {
+                    var item = eval(item);
+                    //初始化根节点
+                    var rootNode = {};
+                    var parentJson = item["parent"];
+                    var sonJson = item["son"]
+                    rootNode["text"] = parentJson.parentDescribe;
+                    rootNode["id"] = parentJson.parentId;
+                    rootNode["selectable"]=false;
+                    rootNode["tags"]=[sonJson.length];
+                    rootNode["nodes"]=[];
+                    //遍历子节点
+                    $.each(sonJson,function (index,item) {
+                        var node = {};
+                        node["text"]=item.describe;
+                        node["id"]=item.id;
+                        node["selectable"]=false;
+                        node["tags"]=[item.permission];
+                        rootNode["nodes"].push(node);
+                    })
+                    tree.push(rootNode);
+                })
+                //alert(tree);
+
+            },
+            error:function () {
+                toastr.error("数据获取失败");
+            }
+        })
+        return tree;
+    }
+    //ajax从后台拿tree数据
+    function getData() {
+        $.ajax({
+            url:'/manager/getPermissionForTree',
+            async:false,
+            success:function (data) {
+                return data;
+            },
+            error:function () {
+                toastr.error("数据获取失败");
+            }
+        })
+    }
+    //编辑角色按钮单击事件
+    function bindAuthority(obj,id) {
+        //先前一步：清楚modal数据
+        $("#role").removeAttr("disabled");
+        $("#role").val("");
+        $("#describe").val("");
+
+        //1、获取到该角色的id
+        var roleid = id;
+        //2、初始化权限tree
+        initializerTree();
+        //3、初始化数据，默认角色名字不可以改，只可以改描述
+        var roleName = $(obj).parent().prev().prev().prev().html();
+        var describe = $(obj).parent().prev().prev().html();
+        $("#role").val(roleName);
+        $("#role").attr("disabled","disabled");
+        $("#describe").val(describe);
+        $("#id").val(roleid);
+        //4、初始化权限数据
+        var targetPermissions = getPermissionByRoleId(roleid)
+        var nodeList = $('#permission_tree').treeview('getUnselected');
+        $.each(nodeList,function (index,item) {
+            if(item.nodes!=null){
+                $.each(item.nodes,function (index,obj) {
+                    if(ifInArray(obj.id,targetPermissions)){
+                        $("#permission_tree").treeview('checkNode', obj.nodeId, {
+                            silent : true,
+                        });
+                    }
+                })
+            }else{
+                if(ifInArray(item.id,targetPermissions)){
+                    $("#permission_tree").treeview('checkNode', item.nodeId, {
+                        silent : true,
+                    });
+                }
+            }
+        })
+
+    }
+    function ifInArray(obj,list) {
+        if(list==null){
+            return false;
+        }
+        if(list.length>0){
+            var l = list.length;
+            while(l>=0){
+                if(list[l]==obj){
+                    return true;
+                }
+                l--;
+            }
+        }else{
+            return false;
+        }
+        return false;
+    }
+    function getPermissionByRoleId(roleid) {
+        var permissionIdList=[];
+        $.ajax({
+            url:'/manager/getPermissionByRoleId',
+            data:{"roleid":roleid},
+            async:false,
+            success:function (data) {
+                if (data["SUCCESS"] == "succ") {
+                    permissionIdList = data["object"];
+                } else {
+                    toastr.error(data["message"]);
+                    permissionIdList = null;
+                }
+            },
+            error:function () {
+                permissionIdList = null;
+            }
+        })
+        return permissionIdList;
+    }
+    //编辑角色提交事件
+    function saveRole() {
+        //1、获取基本数据
+        var role = $("#role").val();
+        var describe = $("#describe").val();
+        var id = $("#id").val();
+        if(id.length<32){
+            id=null;
+        }
+        /**
+         * 2、获取权限数据
+         * 注意这里获取的权限数据包括父节点，因为获取的是所有选中的节点
+         * 因此我们要对数据进行处理
+         */
+        var checkedList = $('#permission_tree').treeview('getChecked');
+        var permissionList = [];
+        $.each(checkedList,function (index,item) {
+            if(item.nodes==null){
+                //这才是子节点,获取permission的id
+                var id = item.id;
+                permissionList.push(id);
+            }
+        })
+        $.ajax({
+            url:'/manager/saveRole',
+            data:{"role":role,"describe":describe,"permissionList":permissionList,"id":id},
+            traditional:true,
+            success:function (data) {
+                if (data["SUCCESS"] == "succ") {
+                    toastr.success('提交成功！');
+                    $("#tb_roles").bootstrapTable('destroy');
+                    var oTable = new TableInit();
+                    oTable.Init();
+                } else {
+                    toastr.error(data["message"]);
+                }
+                $('#myModal').modal('toggle');
+
+            },
+            error:function () {
+                toastr.error("保存失败");
+            }
+        })
+        //alert(permissionList);
+    }
+</script>
+
+</body>
+</html>

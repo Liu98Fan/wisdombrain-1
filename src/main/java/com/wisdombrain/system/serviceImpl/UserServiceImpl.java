@@ -29,8 +29,8 @@ public class UserServiceImpl implements UserService {
         return userDao.getStudentInfoToCheck(role,number);
     }
     @Override
-    public void insertUser(String number, String passwd, String salt, String date, int del_flag,String role) {
-        userDao.insertUser(number,passwd,salt,date,del_flag,role);
+    public String insertUser(String id,String number, String passwd, String salt, String date, String newdate ,int del_flag,String role) {
+        return userDao.insertUser(id,number,passwd,salt,date,newdate,del_flag,role);
     }
 
     @Override
@@ -229,11 +229,13 @@ public class UserServiceImpl implements UserService {
             Role temp = new Role();
             role.setId(temp.getId());
             mark1 = userDao.saveRole(role);
-            for (String permission : permissionList) {
-                //循环插入
-                mark2 = userDao.insertPermissionToRole(role.getId(), permission);
-                if (!mark2.equals("succ")) {
-                    break;
+            if(null!=permissionList){
+                for (String permission : permissionList) {
+                    //循环插入
+                    mark2 = userDao.insertPermissionToRole(role.getId(), permission);
+                    if (!mark2.equals("succ")) {
+                        break;
+                    }
                 }
             }
             if (mark1.equals(mark2)) {
@@ -255,7 +257,11 @@ public class UserServiceImpl implements UserService {
                     for (Permission p : permissions) {
                         String pname = p.getId();
                         //首先要找出添加的权限，然后找出被删除的权限
-                        if (Arrays.asList(permissionList).contains(pname)) {
+                        if(null == permissionList){
+                            //如果permissionList是空，比如删除全部的权限后传来的就是null
+                            deleteList.add(p.getId());
+                        }else if (Arrays.asList(permissionList).contains(pname)) {
+
                             //包含了，那就怎么办呢？说明原数据已经有了，不是我们要修改的目标数据，那就跳过呗
                         } else {
                             //说明不包含了，那就是要删除的数据  permissionList没有permissions里面的数据
@@ -265,16 +271,18 @@ public class UserServiceImpl implements UserService {
                     }
 
                     //那添加的权限怎么找？就是permissionList而permissions没有的，那我们就来遍历permissionList
-                    for (String p : permissionList) {
-                        boolean mark = true;
-                        for (Permission permission : permissions) {
-                            if (permission.getId().equals(p)) {
-                                mark = false;
+                    if(null!=permissionList){
+                        for (String p : permissionList) {
+                            boolean mark = true;
+                            for (Permission permission : permissions) {
+                                if (permission.getId().equals(p)) {
+                                    mark = false;
+                                }
                             }
-                        }
-                        if (mark) {
-                            //没有发现permissions中存在的却在permissionList中存在，则要添加
-                            insertList.add(p);
+                            if (mark) {
+                                //没有发现permissions中存在的却在permissionList中存在，则要添加
+                                insertList.add(p);
+                            }
                         }
                     }
                     //现在删除，添加的都得到了，那就开始操作

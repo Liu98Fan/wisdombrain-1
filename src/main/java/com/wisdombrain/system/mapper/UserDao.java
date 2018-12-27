@@ -20,8 +20,8 @@ public interface UserDao {
     //判断当前注册的学生的账户是否已经注册
     public User getStudentInfoToCheck(@Param("role") String role, @Param("number") String number);
     //插入学生和老师的信息
-    public void insertUser(@Param("number") String number,@Param("passwd") String passwd,@Param("salt") String salt,
-                           @Param("date") String date,@Param("del_flag") int del_flag,@Param("role") String role);
+    public String insertUser(@Param("id") String id,@Param("number") String number,@Param("passwd") String passwd,@Param("salt") String salt,
+                           @Param("date") String date,@Param("newdate") String newdate,@Param("del_flag") int del_flag,@Param("role") String role);
     //得到用户注册时的盐
     public User getUser(@Param("number") String number,@Param("role") String role);
 
